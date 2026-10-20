@@ -58,7 +58,7 @@ def main():
         results[title]={"observed_games":k,"sample_games":n,"rate_percent":round(100*k/n,2),
           "wilson_95_percent":wilson(k,n),"window":"2023–2025 NFL regular seasons",
           "definition":definition,"source":SOURCE,
-          "status":"proxy" if key in ("penalties_15","penalty_yards_125","taunting_first_down") else "verified_game_level"}
+          "status":"proxy" if key in ("penalties_15","penalty_yards_125","taunting_first_down") else "unvalidated_detection" if key=="blocked_punt_td" else "verified_game_level"}
     OUT.write_text(json.dumps({"methodology":"Empirical fraction of NFL regular-season games with recorded event; not a prediction for any particular matchup. Wilson 95% interval. Source: nflverse play-by-play CC BY 4.0.","seasons":list(SEASONS),"total_games":n,"markets":results},indent=2)+"\n")
     print("Saved",OUT,n,"games",len(results),"market measurements")
 if __name__=="__main__":main()
