@@ -1,0 +1,27 @@
+name: Rebuild NFL odds evidence
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "20 11 * * 2"
+  push:
+    paths:
+      - "scripts/build_odds_evidence.py"
+      - ".github/workflows/odds-evidence.yml"
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install pandas pyarrow
+      - run: python scripts/build_odds_evidence.py
+      - name: Commit verified observations
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add odds-evidence.json
+          git diff --cached --quiet || (git commit -m "Update NFL evidence from nflverse" && git push)
