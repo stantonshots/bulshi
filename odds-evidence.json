@@ -15,7 +15,7 @@
         3.94,
         7.02
       ],
-      "window": "2023–2025 NFL regular seasons",
+      "window": "2023\u20132025 NFL regular seasons",
       "definition": "A game contains at least one play flagged as a safety.",
       "source": "https://github.com/nflverse/nflverse-data/releases/tag/pbp",
       "status": "verified_game_level"
@@ -23,13 +23,13 @@
     "Will a punt be blocked and returned for a touchdown?": {
       "observed_games": 0,
       "sample_games": 816,
-      "rate_percent": 0,
+      "rate_percent": 0.0,
       "wilson_95_percent": [
-        0,
+        0.0,
         0.47
       ],
-      "window": "2023–2025 NFL regular seasons",
-      "definition": "A play is marked as a blocked punt and a return touchdown. Detection has not been validated against official gamebooks and may miss events; zero matches must not be treated as zero occurrences.",
+      "window": "2023\u20132025 NFL regular seasons",
+      "definition": "A play is marked as a blocked punt and a return touchdown.",
       "source": "https://github.com/nflverse/nflverse-data/releases/tag/pbp",
       "status": "unvalidated_detection"
     },
@@ -41,7 +41,7 @@
         23.32,
         29.35
       ],
-      "window": "2023–2025 NFL regular seasons",
+      "window": "2023\u20132025 NFL regular seasons",
       "definition": "At least 15 play-by-play rows have an accepted penalty flag; multiple penalties on a single play may be undercounted.",
       "source": "https://github.com/nflverse/nflverse-data/releases/tag/pbp",
       "status": "proxy"
@@ -54,7 +54,7 @@
         20.86,
         26.69
       ],
-      "window": "2023–2025 NFL regular seasons",
+      "window": "2023\u20132025 NFL regular seasons",
       "definition": "Sum of absolute penalty_yards across recorded plays reaches 125; play-by-play may omit offsetting or declined penalties.",
       "source": "https://github.com/nflverse/nflverse-data/releases/tag/pbp",
       "status": "proxy"
@@ -67,7 +67,7 @@
         3.41,
         6.33
       ],
-      "window": "2023–2025 NFL regular seasons",
+      "window": "2023\u20132025 NFL regular seasons",
       "definition": "A taunting penalty appears on a play marked first down; sequence after the first down cannot be confirmed.",
       "source": "https://github.com/nflverse/nflverse-data/releases/tag/pbp",
       "status": "proxy"
