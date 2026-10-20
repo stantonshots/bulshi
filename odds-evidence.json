@@ -1,0 +1,76 @@
+{
+  "methodology": "Empirical fraction of NFL regular-season games with recorded event; not a prediction for any particular matchup. Wilson 95% interval. Source: nflverse play-by-play CC BY 4.0.",
+  "seasons": [
+    2023,
+    2024,
+    2025
+  ],
+  "total_games": 816,
+  "markets": {
+    "Will a game have a safety?": {
+      "observed_games": 43,
+      "sample_games": 816,
+      "rate_percent": 5.27,
+      "wilson_95_percent": [
+        3.94,
+        7.02
+      ],
+      "window": "2023\u20132025 NFL regular seasons",
+      "definition": "A game contains at least one play flagged as a safety.",
+      "source": "https://github.com/nflverse/nflverse-data/releases/tag/pbp",
+      "status": "verified_game_level"
+    },
+    "Will a punt be blocked and returned for a touchdown?": {
+      "observed_games": 0,
+      "sample_games": 816,
+      "rate_percent": 0.0,
+      "wilson_95_percent": [
+        0.0,
+        0.47
+      ],
+      "window": "2023\u20132025 NFL regular seasons",
+      "definition": "A play is marked as a blocked punt and a return touchdown.",
+      "source": "https://github.com/nflverse/nflverse-data/releases/tag/pbp",
+      "status": "verified_game_level"
+    },
+    "Will there be 15+ accepted penalties in one game?": {
+      "observed_games": 214,
+      "sample_games": 816,
+      "rate_percent": 26.23,
+      "wilson_95_percent": [
+        23.32,
+        29.35
+      ],
+      "window": "2023\u20132025 NFL regular seasons",
+      "definition": "At least 15 play-by-play rows have an accepted penalty flag; multiple penalties on a single play may be undercounted.",
+      "source": "https://github.com/nflverse/nflverse-data/releases/tag/pbp",
+      "status": "proxy"
+    },
+    "Will there be 125+ total penalty yards in one game?": {
+      "observed_games": 193,
+      "sample_games": 816,
+      "rate_percent": 23.65,
+      "wilson_95_percent": [
+        20.86,
+        26.69
+      ],
+      "window": "2023\u20132025 NFL regular seasons",
+      "definition": "Sum of absolute penalty_yards across recorded plays reaches 125; play-by-play may omit offsetting or declined penalties.",
+      "source": "https://github.com/nflverse/nflverse-data/releases/tag/pbp",
+      "status": "proxy"
+    },
+    "Will a player be flagged for taunting after a first down?": {
+      "observed_games": 38,
+      "sample_games": 816,
+      "rate_percent": 4.66,
+      "wilson_95_percent": [
+        3.41,
+        6.33
+      ],
+      "window": "2023\u20132025 NFL regular seasons",
+      "definition": "A taunting penalty appears on a play marked first down; sequence after the first down cannot be confirmed.",
+      "source": "https://github.com/nflverse/nflverse-data/releases/tag/pbp",
+      "status": "proxy"
+    }
+  }
+}
